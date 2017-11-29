@@ -30,21 +30,21 @@ void  INThandler(int sig)
 int main()
 {
     signal(SIGINT, INThandler);
-	setlocale(LC_ALL,"");
+    setlocale(LC_ALL,"");
+    // delay 30 ms
     struct timespec ts = {0, 30000000L };
     
-	int i;
-	int bar[50];
-	int size = sizeof(bar)/sizeof(int);
+    int i;
+    int bar[50];
+    int size = sizeof(bar)/sizeof(int);
     
-	// initialize bar with spaces
-	for (i = 0; i < size -1; i++)
-		bar[i] = ' ';
-        
+    // initialize bar with spaces
+    for (i = 0; i < size -1; i++)
+        bar[i] = ' ';
     // terminate string
     bar[size - 1] = '\0';
 
-	for(;;) {
+    for(;;) {
         for (i = 0; i < size - 1; i++) {
                 bar[i] = RECTANGLE;
                 fflush(stdout);
@@ -69,7 +69,6 @@ int main()
                 nanosleep(&ts, NULL);
         }
     }
-		
-	return 0;
+    return 0;
 }
 
