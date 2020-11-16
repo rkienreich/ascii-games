@@ -16,7 +16,7 @@
 #define ANSI_COLOR_CYAN    "\x1b[36m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
-#define TSLEEP 30000000L
+#define TSLEEP 20000000L
 
 // UTF-8 Code
 #define RECTANGLE 9632
