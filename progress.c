@@ -16,6 +16,7 @@
 #define ANSI_COLOR_CYAN    "\x1b[36m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
+#define TSLEEP 30000000L
 
 // UTF-8 Code
 #define RECTANGLE 9632
@@ -32,7 +33,7 @@ int main()
     signal(SIGINT, INThandler);
     setlocale(LC_ALL,"");
     // delay 30 ms
-    struct timespec ts = {0, 30000000L };
+    struct timespec ts = {0, TSLEEP};
     
     int i;
     int bar[50];

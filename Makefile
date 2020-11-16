@@ -1,5 +1,6 @@
 progress:	progress.c
-	gcc progress.c -o progress -Wall
+	mkdir -p build
+	gcc progress.c -o build/progress -Wall
 	
 clean:
 	rm -f progress
